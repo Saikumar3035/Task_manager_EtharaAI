@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useApp } from "../context/AppContext";
 
-const API_URL = import.meta.env.VITE_API_URL + "/api/auth"; // ✅ Correct
+const API_URL = import.meta.env.VITE_API_URL + "/api/auth";
 
 export default function AuthPage() {
   const { setCurrentUser, showToast } = useApp();
