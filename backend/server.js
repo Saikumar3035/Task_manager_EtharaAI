@@ -16,6 +16,7 @@ const authRoutes = require('./routes/authRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const taskRoutes = require('./routes/taskRoutes');
 
+// API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/tasks', taskRoutes);
@@ -23,8 +24,8 @@ app.use('/api/tasks', taskRoutes);
 // Serve Frontend Static Files
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-// Handle React Router (catch all)
-app.get('*', (req, res) => {
+// Handle React Router (Fix for Express 5)
+app.get('/{*path}', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
 
