@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const app = express();
 
-console.log("Mongo URI:", process.env.MONGO_URI);
+//console.log("Mongo URI:", process.env.MONGO_URI);
 
 app.use(cors({
   origin: function (origin, callback) {
