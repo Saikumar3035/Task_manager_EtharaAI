@@ -25,6 +25,8 @@ try {
   const authRoutes = require('./routes/authRoutes');
   app.use('/api/auth', authRoutes);
   console.log('Auth routes loaded');
+  const projectRoutes = require('./routes/projectRoutes');
+  console.log('Project routes loaded');
 } catch (err) {
   console.error(err);
 }
@@ -33,6 +35,8 @@ try {
   const taskRoutes = require('./routes/taskRoutes');
   app.use('/api/tasks', taskRoutes);
   console.log('Task routes loaded');
+  app.use('/api/projects', projectRoutes);
+  console.log('Project routes loaded');
 } catch (err) {
   console.error(err);
 }
