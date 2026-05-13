@@ -3,7 +3,7 @@ import { useState, useContext, createContext, useCallback, useEffect } from "rea
 const AppCtx = createContext(null);
 export const useApp = () => useContext(AppCtx);
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "/api"; 
 
 let toastTimer = null;
 
